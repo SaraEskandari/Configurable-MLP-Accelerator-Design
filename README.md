@@ -26,6 +26,11 @@ The system consists of the following key modules:
 </p>
 
 <p align="center">
+  <img src="assets/bit_multiplier2.png" alt="1-bit Multiplier Logic" width="400"/>
+</p>
+
+
+<p align="center">
   <img src="assets/array_multiplier.png" alt="Array Multiplier Architecture" width="550"/>
   <br>
   <em>Figure 2: 4x4 Parallel Array Multiplier Architecture</em>
