@@ -1,4 +1,9 @@
-# Mark post-synthesis gate-level netlists as generated
+# Treat Verilog netlists as generated / vendored
 post_mlp/** linguist-generated=true
 post_mtarix_multiplier/** linguist-generated=true
 *.v linguist-generated=true
+*.v linguist-vendored=true
+
+# Force VHDL language detection
+*.vhd linguist-detectable=true
+*.vhd linguist-language=VHDL
