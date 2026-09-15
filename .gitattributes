@@ -1,0 +1,4 @@
+# Mark post-synthesis gate-level netlists as generated
+post_mlp/** linguist-generated=true
+post_mtarix_multiplier/** linguist-generated=true
+*.v linguist-generated=true
