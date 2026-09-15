@@ -27,13 +27,15 @@ The system consists of the following key modules:
 
 <p align="center">
   <img src="assets/bit_multiplier2.png" alt="1-bit Multiplier Logic" width="400"/>
+  <br>
+  <em>Figure 2: Block Diagram of the 1-bit multiplier</em>
 </p>
 
 
 <p align="center">
   <img src="assets/array_multiplier.png" alt="Array Multiplier Architecture" width="550"/>
   <br>
-  <em>Figure 2: 4x4 Parallel Array Multiplier Architecture</em>
+  <em>Figure 3: 4x4 Parallel Array Multiplier Architecture</em>
 </p>
 
 #### 2. Matrix Multiplier
