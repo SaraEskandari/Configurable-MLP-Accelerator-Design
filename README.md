@@ -43,9 +43,21 @@ The system consists of the following key modules:
 
 #### 3. Activation & Classification
 **`RELU / ARGMAX`**: Non-linear activation and terminal classification stages.
+### Fully Connected Layer Architecture
+<p align="center">
+  <img src="assets/fullyconnected.png" alt="Fully Connected Layer Architecture" width="700"/>
+    <br>
+  <em>Figure 4: Block Diagram of Fully-Connected</em>
+</p>
 
 #### 4. Top-Level Module
 **`MLP (Top-Level)`**: Connects multiple layers dynamically based on configuration parameters and controls multi-layer data flow.
+<p align="center">
+  <img src="assets/mlp.png" alt="Top-Level MLP Architecture" width="750"/>
+      <br>
+  <em>Figure 5: Block Diagram of MLP</em>
+</p>
+
 
 - `MATRIX_MULTIPLIER`: Instantiates parallel dot-product computations for all neurons across a layer using structural `GENERATE` statements.
 - `RELU` / `ARGMAX`: Non-linear activation and terminal classification stages.
