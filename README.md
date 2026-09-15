@@ -12,9 +12,34 @@ It was designed as part of the Digital System Design course (Spring 2026).
 - **Dynamic Topology:** Easy adjustment of layer counts and neurons via VHDL generics (`TOPOLOGY` array), with dynamic bus slicing for flattened weight/bias arrays.
 - **Verification:** Evaluated using the MNIST dataset, achieving >93% inference accuracy.
 
-## Hardware Architecture
+### Architecture & Key Modules
+
 The system consists of the following key modules:
-- `ARRAY_MULTIPLIER`: The core bit-level matrix multiplication unit.
+
+#### 1. Array Multiplier
+**`ARRAY_MULTIPLIER`**: The core bit-level matrix multiplication unit constructed using a regular 2D grid of full adders and AND gates.
+
+<p align="center">
+  <img src="assets/bit_multiplier.png" alt="Bit Multiplier Logic" width="350"/>
+  <br>
+  <em>Figure 1: Internal logic cell of the 1-bit multiplier</em>
+</p>
+
+<p align="center">
+  <img src="assets/array_multiplier.png" alt="Array Multiplier Architecture" width="550"/>
+  <br>
+  <em>Figure 2: 4x4 Parallel Array Multiplier Architecture</em>
+</p>
+
+#### 2. Matrix Multiplier
+**`MATRIX_MULTIPLIER`**: Instantiates parallel dot-product computations for all neurons across a layer using structural `GENERATE` statements.
+
+#### 3. Activation & Classification
+**`RELU / ARGMAX`**: Non-linear activation and terminal classification stages.
+
+#### 4. Top-Level Module
+**`MLP (Top-Level)`**: Connects multiple layers dynamically based on configuration parameters and controls multi-layer data flow.
+
 - `MATRIX_MULTIPLIER`: Instantiates parallel dot-product computations for all neurons across a layer using structural `GENERATE` statements.
 - `RELU` / `ARGMAX`: Non-linear activation and terminal classification stages.
 - `MLP` (Top-Level): Connects multiple layers dynamically based on the configuration arrays and handles multi-layer data flow.
